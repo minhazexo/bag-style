@@ -233,7 +233,7 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
     try {
       const name = draft.name.trim();
       const price = Number(draft.price);
-      if (name.length < 2 || !Number.isFinite(price) || price < 0) throw new Error("Add a product name and a valid price.");
+      if (name.length < 2 || !Number.isFinite(price) || price <= 0) throw new Error("Add a product name and a price greater than zero.");
       const images = draft.images.split(/\r?\n/).map((value) => value.trim()).filter(Boolean);
       const row = {
         name,
@@ -297,26 +297,30 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
         const categoryName = String(item.category || "").toLowerCase();
         const category = categories.find((entry) => entry.name.toLowerCase() === categoryName || entry.slug === slugify(categoryName));
         const imageList = Array.isArray(item.images) ? item.images.map(String) : [];
-        const priceValue = Number(item.price);
+        const priceValue = item.price == null || item.price === "" ? Number.NaN : Number(item.price);
+        const currency = String(item.currency || "BDT").toUpperCase();
+        const validLocalPrice = Number.isFinite(priceValue) && priceValue > 0 && currency === "BDT";
+        const availability = String(item.availability || "");
+        const unavailable = /outofstock|discontinued/i.test(availability);
         return {
           name,
           slug: slugify(String(item.slug || name)),
           description: String(item.description || ""),
-          price: Number.isFinite(priceValue) && priceValue >= 0 ? priceValue : 0,
+          price: validLocalPrice ? priceValue : 0,
           sku: item.sku ? String(item.sku) : null,
           category_id: category?.id || null,
           images: imageList,
           featured: false,
-          is_active: true,
-          stock_quantity: null,
-          tags: item.availability ? [String(item.availability)] : []
+          is_active: validLocalPrice,
+          stock_quantity: unavailable ? 0 : null,
+          tags: [availability, currency].filter(Boolean)
         };
       }).filter((row): row is NonNullable<typeof row> => Boolean(row));
       if (!rows.length) throw new Error("No valid products were found in the JSON file.");
       const { error: importError } = await supabase.from("products").upsert(rows, { onConflict: "slug" });
       if (importError) throw importError;
       await loadData();
-      showNotice("Imported " + rows.length + " products. Review prices, stock and images before launch.");
+      showNotice("Imported " + rows.length + " products. Unpriced or non-BDT items stay hidden until reviewed.");
     } catch (importError) {
       setError(importError instanceof Error ? importError.message : "Could not import that JSON file.");
     } finally {
