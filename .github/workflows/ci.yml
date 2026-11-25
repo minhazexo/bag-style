@@ -24,6 +24,13 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Preserve Bun lockfile
+        uses: actions/upload-artifact@v4
+        with:
+          name: bun-lockfile
+          path: bun.lock
+          if-no-files-found: error
+
       - name: Typecheck
         run: bun run typecheck
 
