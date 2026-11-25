@@ -1,4 +1,4 @@
-import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { type FormEvent, type ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import {
   type Category,
@@ -41,7 +41,7 @@ const emptyDraft: ProductDraft = {
 const statuses = ["pending", "confirmed", "processing", "shipped", "delivered", "cancelled"];
 
 function AdminIcon({ name }: { name: string }) {
-  const paths: Record<string, React.ReactNode> = {
+  const paths: Record<string, ReactNode> = {
     grid: <><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></>,
     box: <><path d="m12 3 9 5-9 5-9-5 9-5Z" /><path d="m3 8 9 5 9-5M3 8v9l9 5 9-5V8M12 13v9" /></>,
     orders: <><path d="M5 4h14v17H5z" /><path d="M8 8h8M8 12h8M8 16h5" /></>,
@@ -55,7 +55,7 @@ function AdminIcon({ name }: { name: string }) {
   return <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name] || paths.grid}</svg>;
 }
 
-function AdminNotice({ children, error = false }: { children: React.ReactNode; error?: boolean }) {
+function AdminNotice({ children, error = false }: { children: ReactNode; error?: boolean }) {
   return <div className={error ? "admin-notice error" : "admin-notice"}>{children}</div>;
 }
 
@@ -311,7 +311,7 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
           stock_quantity: null,
           tags: item.availability ? [String(item.availability)] : []
         };
-      }).filter(Boolean);
+      }).filter((row): row is NonNullable<typeof row> => Boolean(row));
       if (!rows.length) throw new Error("No valid products were found in the JSON file.");
       const { error: importError } = await supabase.from("products").upsert(rows, { onConflict: "slug" });
       if (importError) throw importError;
