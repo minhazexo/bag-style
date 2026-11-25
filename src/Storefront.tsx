@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { type FormEvent, type ReactNode, useEffect, useMemo, useState } from "react";
 import {
   DEFAULT_SETTINGS,
   DEMO_CATEGORIES,
@@ -18,7 +18,7 @@ const heroImage = "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?aut
 
 function Icon({ name, size = 20 }: { name: string; size?: number }) {
   const common = { width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.65, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
-  const paths: Record<string, React.ReactNode> = {
+  const paths: Record<string, ReactNode> = {
     bag: <><path d="M5 8h14l-1 13H6L5 8Z" /><path d="M9 9V6a3 3 0 0 1 6 0v3" /></>,
     search: <><circle cx="10.8" cy="10.8" r="6.5" /><path d="m16 16 4.5 4.5" /></>,
     arrow: <><path d="M4 12h15" /><path d="m13 5 7 7-7 7" /></>,
