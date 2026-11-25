@@ -111,7 +111,8 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
   }, []);
 
   useEffect(() => {
-    if (!supabase) { setAuthReady(true); return; }
+    const client = supabase;
+    if (!client) { setAuthReady(true); return; }
     let active = true;
     const verifyAdmin = async (current: Session | null) => {
       if (!active) return;
@@ -120,11 +121,11 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
         setAuthReady(true);
         return;
       }
-      const { data, error: lookupError } = await supabase.from("admin_users")
+      const { data, error: lookupError } = await client.from("admin_users")
         .select("user_id").eq("user_id", current.user.id).maybeSingle();
       if (!active) return;
       if (lookupError || !data) {
-        await supabase.auth.signOut();
+        await client.auth.signOut();
         setSession(null);
         setAuthError("This account does not have admin access. Add its user ID to public.admin_users first.");
       } else {
@@ -134,8 +135,8 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
       }
       setAuthReady(true);
     };
-    void supabase.auth.getSession().then(({ data }) => verifyAdmin(data.session));
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, nextSession) => {
+    void client.auth.getSession().then(({ data }) => verifyAdmin(data.session));
+    const { data: listener } = client.auth.onAuthStateChange((_event, nextSession) => {
       window.setTimeout(() => { void verifyAdmin(nextSession); }, 0);
     });
     return () => {
