@@ -6,5 +6,3 @@ dist
 .vercel
 .DS_Store
 data/source-products.json
-bun.lock
-bun.lockb

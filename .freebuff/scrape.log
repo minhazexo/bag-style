@@ -1,0 +1,21 @@
+$ bun run scripts/scrape-source.ts https://bag-style.com
+Crawling https://bag-style.com
+Reading listing 1: https://bag-style.com/shop/
+Reading listing 2: https://bag-style.com/shop/page/2/
+Reading listing 3: https://bag-style.com/shop/page/3/
+Reading listing 4: https://bag-style.com/shop/page/4/
+Reading listing 5: https://bag-style.com/shop/page/5/
+Reading listing 6: https://bag-style.com/shop/page/1/
+Found 78 product pages across 6 shop listings
+Parsed 10/78 product pages
+Parsed 20/78 product pages
+Parsed 30/78 product pages
+Parsed 40/78 product pages
+Parsed 50/78 product pages
+Parsed 60/78 product pages
+Parsed 70/78 product pages
+Parsed 78/78 product pages
+Exported 77 products (77 priced) to data/source-products.json
+Exported 11 categories to data/source-categories.json
+Skipped 1 pages:
+https://bag-style.com/product/530/ (no product markup)

@@ -52,10 +52,11 @@ Imported images initially retain their source URLs. For permanent ownership and 
 
 ## Vercel
 
-1. Import `minhazexo/bag-style` into Vercel.
-2. Select the Vite preset, build command `bun run build` and output directory `dist`.
-3. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` to Vercel Environment Variables.
-4. Deploy and add the custom domain in Vercel settings.
+1. Import `minhazexo/bag-style` into Vercel. `vercel.json` pins the framework preset, `bun install --frozen-lockfile`, `bun run build` and the `dist` output directory, so keep the tracked `bun.lock` in sync with `package.json` (CI enforces the same).
+2. Add these Environment Variables to the project (Production, Preview and Development): `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY` and `SITE_URL` (for example `https://bag-style.com`, no trailing slash). Optionally add `VITE_POSTHOG_KEY` and `VITE_POSTHOG_HOST`.
+3. Deploy and add the custom domain in Vercel settings.
+4. Shared links to `/p/<slug>` get their own title, description and Open Graph image: `bun run build` prerenders one page per product and category. Without `SITE_URL` on the deployment the sitemap, canonical links and product JSON-LD are skipped and the build log says so.
+5. `vercel.json` rewrites unknown paths to `index.html` so `/admin` and other client routes survive a hard refresh; `/assets/*` is cached immutably, and the prerendered `/p/<slug>` and `/c/<slug>` pages plus `sitemap.xml` and `robots.txt` are served as real files.
 
 ## Before launch
 

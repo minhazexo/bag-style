@@ -101,7 +101,36 @@ export function slugify(value: string): string {
     .replace(/(^-|-$)/g, "");
 }
 
+/** Local Bangladeshi numbers (01XXXXXXXXX) become 8801XXXXXXXXX for wa.me. */
+export function formatWhatsAppNumber(number: string): string {
+  const digits = number.replace(/\D/g, "");
+  if (!digits) return "";
+  if (digits.startsWith("00")) return digits.slice(2);
+  if (digits.startsWith("880")) return digits;
+  if (digits.startsWith("0")) return "880" + digits.slice(1);
+  if (digits.length === 10 && digits.startsWith("1")) return "880" + digits;
+  return digits;
+}
+
 export function getWhatsAppUrl(number: string, message: string): string {
-  const cleaned = number.replace(/\D/g, "");
+  const cleaned = formatWhatsAppNumber(number);
   return "https://wa.me/" + cleaned + "?text=" + encodeURIComponent(message);
+}
+
+/** A single-product enquiry the store can match to an exact catalogue item. */
+export function getProductOrderMessage(product: Product, storeName: string, quantity = 1): string {
+  const details = [
+    "Product: " + product.name,
+    product.sku ? "Product code: " + product.sku : null,
+    "Price: " + money(product.price),
+    "Quantity: " + quantity,
+    product.category?.name ? "Category: " + product.category.name : null,
+    product.images?.[0] ? "Photo: " + product.images[0] : null
+  ].filter((line): line is string => Boolean(line));
+
+  return [
+    "Hello " + storeName + "! I'd like to order this bag:",
+    details.join("\n"),
+    "Please confirm availability, delivery charge and the next steps. Thank you!"
+  ].join("\n\n");
 }

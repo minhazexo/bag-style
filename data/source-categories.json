@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Backpack",
+    "slug": "backpack",
+    "source_url": "https://bag-style.com/product-category/backpack/",
+    "description": "A backpack is a two-strap bag worn on the shoulders, designed for balanced weight distribution and roomy storage—perfect for daily use, travel, or carrying heavier items comfortably.",
+    "parent": null,
+    "product_count": 13
+  },
+  {
+    "name": "Cross Body",
+    "slug": "cross-body",
+    "source_url": "https://bag-style.com/product-category/cross-body/",
+    "description": "A crossbody bag is a compact, hands-free bag worn across the body with a long strap, offering comfort, security, and easy access to essentials.",
+    "parent": null,
+    "product_count": 2
+  },
+  {
+    "name": "Handbag",
+    "slug": "handbag",
+    "source_url": "https://bag-style.com/product-category/handbag/",
+    "description": "A handbag is a stylish carryall designed to be held by hand or worn on the arm, offering both fashion and functionality for everyday essentials.",
+    "parent": null,
+    "product_count": 13
+  },
+  {
+    "name": "Ladies Bag",
+    "slug": "ladies-bag",
+    "source_url": "https://bag-style.com/product-category/ladies-bag/",
+    "description": "",
+    "parent": null,
+    "product_count": 1
+  },
+  {
+    "name": "Laptop Bag",
+    "slug": "laptop-bag",
+    "source_url": "https://bag-style.com/product-category/laptop-bag/",
+    "description": "A laptop bag is a padded, protective bag designed to safely carry a laptop and accessories, featuring organized compartments for tech gear and everyday essentials.",
+    "parent": null,
+    "product_count": 3
+  },
+  {
+    "name": "Men's Backpack",
+    "slug": "mens-backpack-2",
+    "source_url": "https://bag-style.com/product-category/mens-backpack-2/",
+    "description": "",
+    "parent": null,
+    "product_count": 2
+  },
+  {
+    "name": "party purse",
+    "slug": "party-purse",
+    "source_url": "https://bag-style.com/product-category/party-purse/",
+    "description": "",
+    "parent": null,
+    "product_count": 5
+  },
+  {
+    "name": "Purse",
+    "slug": "purse",
+    "source_url": "https://bag-style.com/product-category/purse/",
+    "description": "A purse is a small, portable bag used to carry essential items like money, cards, and small personal belongings—compact, convenient, and easy to carry daily.",
+    "parent": null,
+    "product_count": 6
+  },
+  {
+    "name": "School Bag",
+    "slug": "school-bag",
+    "source_url": "https://bag-style.com/product-category/school-bag/",
+    "description": "",
+    "parent": null,
+    "product_count": 1
+  },
+  {
+    "name": "Student Bag",
+    "slug": "student-bag",
+    "source_url": "https://bag-style.com/product-category/student-bag/",
+    "description": "A student bag is a practical, durable bag designed to carry books, notebooks, and school supplies, often featuring multiple compartments for easy organization and daily use.",
+    "parent": null,
+    "product_count": 1
+  },
+  {
+    "name": "Travel Bag",
+    "slug": "travel-bag",
+    "source_url": "https://bag-style.com/product-category/travel-bag/",
+    "description": "A travel bag is a spacious, durable bag designed to hold clothing and essentials for trips, offering organized storage and easy portability for short or long journeys.",
+    "parent": null,
+    "product_count": 10
+  }
+]

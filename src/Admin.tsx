@@ -273,6 +273,17 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
     }
   };
 
+  const deleteProduct = async (product: Product) => {
+    if (!supabase) return;
+    if (!window.confirm("Delete " + product.name + " permanently? This cannot be undone.")) return;
+    const { error: deleteError } = await supabase.from("products").delete().eq("id", product.id);
+    if (deleteError) setError(deleteError.message);
+    else {
+      setProducts((current) => current.filter((item) => item.id !== product.id));
+      showNotice("Product deleted.");
+    }
+  };
+
   const addCategory = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!supabase || !newCategory.trim()) return;
@@ -282,6 +293,29 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
       setNewCategory("");
       await loadData();
       showNotice("Category created.");
+    }
+  };
+
+  const renameCategory = async (category: Category) => {
+    if (!supabase) return;
+    const nextName = window.prompt("Rename category", category.name)?.trim();
+    if (!nextName || nextName === category.name) return;
+    const { error: renameError } = await supabase.from("categories").update({ name: nextName, slug: slugify(nextName) }).eq("id", category.id);
+    if (renameError) setError(renameError.message);
+    else {
+      await loadData();
+      showNotice("Category renamed.");
+    }
+  };
+
+  const deleteCategory = async (category: Category) => {
+    if (!supabase) return;
+    if (!window.confirm("Delete the " + category.name + " category? Products in it become uncategorised.")) return;
+    const { error: deleteError } = await supabase.from("categories").delete().eq("id", category.id);
+    if (deleteError) setError(deleteError.message);
+    else {
+      await loadData();
+      showNotice("Category deleted.");
     }
   };
 
@@ -423,10 +457,10 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
               <div className="admin-section-card">
                 <div className="admin-section-head"><div><p className="eyebrow">YOUR COLLECTION</p><h3>Product catalogue <span className="count-badge">{products.length}</span></h3></div><div className="admin-head-actions"><label className="import-json-button"> {importing ? "Importing…" : "Import JSON"} <input type="file" accept="application/json,.json" disabled={importing} onChange={(event) => { void importJson(event.target.files?.[0]); event.currentTarget.value = ""; }} /></label><button className="button button-dark button-small" onClick={() => beginEdit()}><AdminIcon name="plus" /> Add product</button></div></div>
                 <label className="admin-search"><AdminIcon name="search" /><input value={productSearch} onChange={(event) => setProductSearch(event.target.value)} placeholder="Search by product, SKU or slug…" /></label>
-                <div className="admin-products-grid">{filteredProducts.map((product) => <article className="admin-product-card" key={product.id}><img src={product.images?.[0] || "/bag-icon.svg"} alt={product.name} /><div className="admin-product-details"><div className="admin-product-title"><strong>{product.name}</strong><span className={product.is_active ? "visibility-tag visible" : "visibility-tag"}>{product.is_active ? "Live" : "Hidden"}</span></div><span>{product.sku || "No SKU"} · {product.stock_quantity == null ? "Stock not tracked" : product.stock_quantity + " in stock"}</span><b>{money(Number(product.price))}</b><div className="admin-product-actions"><button onClick={() => beginEdit(product)}>Edit details</button><button onClick={() => void toggleProduct(product)}>{product.is_active ? "Hide" : "Publish"}</button></div></div></article>)}</div>
+                <div className="admin-products-grid">{filteredProducts.map((product) => <article className="admin-product-card" key={product.id}><img src={product.images?.[0] || "/bag-icon.svg"} alt={product.name} /><div className="admin-product-details"><div className="admin-product-title"><strong>{product.name}</strong><span className={product.is_active ? "visibility-tag visible" : "visibility-tag"}>{product.is_active ? "Live" : "Hidden"}</span></div><span>{product.sku || "No SKU"} · {product.stock_quantity == null ? "Stock not tracked" : product.stock_quantity + " in stock"}</span><b>{money(Number(product.price))}</b><div className="admin-product-actions"><button onClick={() => beginEdit(product)}>Edit details</button><button onClick={() => void toggleProduct(product)}>{product.is_active ? "Hide" : "Publish"}</button><button className="danger-link" onClick={() => void deleteProduct(product)}>Delete</button></div></div></article>)}</div>
                 {filteredProducts.length === 0 ? <div className="admin-empty">No products match this search.</div> : null}
               </div>
-              <div className="admin-section-card category-manager"><div><p className="eyebrow">ORGANISE THE COLLECTION</p><h3>Categories</h3></div><form onSubmit={addCategory}><input value={newCategory} onChange={(event) => setNewCategory(event.target.value)} placeholder="New category name" required /><button className="button button-outline button-small">Add category</button></form><div className="category-manager-list">{categories.map((category) => <span key={category.id}>{category.name}</span>)}</div></div>
+              <div className="admin-section-card category-manager"><div><p className="eyebrow">ORGANISE THE COLLECTION</p><h3>Categories</h3></div><form onSubmit={addCategory}><input value={newCategory} onChange={(event) => setNewCategory(event.target.value)} placeholder="New category name" required /><button className="button button-outline button-small">Add category</button></form><div className="category-manager-list">{categories.map((category) => <span key={category.id} className="category-chip">{category.name}<button type="button" onClick={() => void renameCategory(category)} title="Rename category">Rename</button><button type="button" className="danger-link" onClick={() => void deleteCategory(category)} title="Delete category">×</button></span>)}</div></div>
               {editorOpen ? (
                 <div className="admin-editor-layer"><form className="product-editor" onSubmit={saveProduct}>
                   <div className="admin-section-head"><div><p className="eyebrow">{draft.id ? "UPDATE THE DETAILS" : "ADD SOMETHING GOOD"}</p><h3>{draft.id ? "Edit product" : "New product"}</h3></div><button type="button" className="icon-button" onClick={() => setEditorOpen(false)}>×</button></div>
