@@ -23,7 +23,7 @@ const root = process.cwd();
 const distDir = join(root, "dist");
 const MARK_START = "<!-- share-meta:start -->";
 const MARK_END = "<!-- share-meta:end -->";
-const STORE_NAME = "Bag Style";
+const STORE_NAME = "Bag Bari";
 
 async function loadEnvFile() {
   try {
@@ -191,8 +191,8 @@ function robotsTxt() {
 
 async function main() {
   const template = await readFile(join(distDir, "index.html"), "utf8");
-  const homeTitle = "Bag Style — Carry your story";
-  const homeDescription = "Discover thoughtfully designed bags for every day. Shop Bag Style online.";
+  const homeTitle = "Bag Bari — Carry your story";
+  const homeDescription = "Discover thoughtfully designed bags for every day. Shop Bag Bari online.";
 
   if (siteUrl) {
     await writeFile(join(distDir, "index.html"), render(template, {

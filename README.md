@@ -1,4 +1,4 @@
-# Bag Style
+# Bag Bari
 
 A mobile-first storefront and private admin dashboard built with **Bun, Vite, React, TypeScript and Supabase**, configured for Vercel.
 

@@ -51,7 +51,7 @@ export type StoreSettings = {
 };
 
 export const DEFAULT_SETTINGS: StoreSettings = {
-  store_name: "BAG STYLE",
+  store_name: "BAG BARI",
   announcement: "A little something special for the way you move.",
   hero_title: "Carry your story.",
   hero_subtitle: "Considered shapes, everyday ease, and the details that make a bag yours.",

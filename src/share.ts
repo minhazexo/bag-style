@@ -3,10 +3,10 @@ import { money, type Category, type Product } from "./lib";
 export type NavigateOptions = { replace?: boolean; keepScroll?: boolean };
 export type Navigate = (path: string, options?: NavigateOptions) => void;
 
-const STORE_NAME = "Bag Style";
+const STORE_NAME = "Bag Bari";
 const DEFAULT_IMAGE = "/favicon.png";
-const HOME_TITLE = "Bag Style — Carry your story";
-const HOME_DESCRIPTION = "Discover thoughtfully designed bags for every day. Shop Bag Style online.";
+const HOME_TITLE = "Bag Bari — Carry your story";
+const HOME_DESCRIPTION = "Discover thoughtfully designed bags for every day. Shop Bag Bari online.";
 
 /** A shareable, crawler-friendly route for one product. */
 export function productSharePath(product: Product): string {

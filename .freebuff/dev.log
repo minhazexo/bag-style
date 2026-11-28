@@ -67,3 +67,47 @@ $ vite --host "127.0.0.1" --port "5175"
 [2m2:16:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/Storefront.tsx[22m
 [2m2:17:37 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/Storefront.tsx[22m
 [2m2:17:38 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m12:36:01 AM[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m12:36:02 AM[22m [36m[1m[vite][22m[39m server restarted.
+[2m12:36:04 AM[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m12:36:04 AM[22m [36m[1m[vite][22m[39m server restarted.
+[2m12:36:07 AM[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m12:36:07 AM[22m [36m[1m[vite][22m[39m server restarted.
+[2m12:36:08 AM[22m [36m[1m[vite][22m[39m [32m.env.local changed, restarting server...[39m
+[2m12:36:08 AM[22m [36m[1m[vite][22m[39m server restarted.
+[31mfile watcher error: EBUSY: resource busy or locked, watch 'E:\Project\bag-style\public\favicon.zip'[39m
+[2m10:26:16 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m10:54:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m10:54:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m10:54:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m10:54:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:55:14 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m10:55:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:56:19 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:56:23 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:56:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:56:28 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:56:29 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:56:44 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:56:51 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:56:54 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:57:01 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m10:57:08 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:57:09 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:57:09 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:57:22 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m10:57:27 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m10:58:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m11:14:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m11:14:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m11:14:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx, /src/Admin.tsx[22m
+[2m11:14:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m11:14:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Admin.tsx[22m
+[2m11:14:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m11:25:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m11:25:21 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m11:27:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m11:32:42 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/Storefront.tsx[22m
+[2m11:32:44 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m11:39:06 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m
+[2m11:42:06 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/storefront.css[22m

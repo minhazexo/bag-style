@@ -71,13 +71,15 @@ function ProductCard({
         <span className="sf-quick">Quick view <Icon name="arrow" size={15} /></span>
       </button>
       <div className="sf-card-body">
-        <span className="sf-card-cat">{product.category?.name || "BAG STYLE"}</span>
+        <span className="sf-card-cat">{product.category?.name || "BAG BARI"}</span>
         <h3 className="sf-card-name"><button onClick={() => onOpen(product)}>{product.name}</button></h3>
         <div className="sf-price-row">
           <span className="sf-price">{money(product.price)}</span>
           {sale ? <span className="sf-price-was">{money(Number(product.compare_at_price))}</span> : null}
         </div>
-        <span className={soldOut ? "sf-stock out" : "sf-stock"}>{soldOut ? "Out of stock" : "In stock · Cash on delivery"}</span>
+        <span className={soldOut ? "sf-stock out" : "sf-stock"}>
+          <span>{soldOut ? "Out of stock" : <>In stock<span className="sf-stock-cod"> · Cash on delivery</span></>}</span>
+        </span>
         <div className="sf-card-actions">
           <button className="sf-btn sf-add" disabled={soldOut} onClick={() => onAdd(product)}>
             <Icon name="bag" size={16} /> Add
@@ -124,10 +126,20 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
   const [checkoutError, setCheckoutError] = useState("");
   const [notice, setNotice] = useState("");
   const [descriptionOpen, setDescriptionOpen] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("bag-style-cart", JSON.stringify(cart));
   }, [cart]);
+
+  // The phone sticky bar waits until the hero scrolls away so it never covers the hero buttons.
+  useEffect(() => {
+    const hero = document.querySelector(".sf-hero");
+    if (!hero || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(([entry]) => setPastHero(!entry.isIntersecting), { threshold: 0 });
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
 
   // /p/<slug> links open the matching product, so a forwarded link lands on that bag.
   useEffect(() => {
@@ -427,9 +439,11 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
   const descriptionText = (selected?.description || "").replace(/^description\s*[:\-–]?\s*/i, "").trim()
     || "A thoughtful everyday favourite, chosen to move with you.";
   const longDescription = descriptionText.length > 320;
+  // The phone bar only earns its space once there is a bag to check out and the hero is gone.
+  const showStickyBar = pastHero && cartCount > 0;
 
   return (
-    <div className="store-shell">
+    <div className={showStickyBar ? "store-shell is-past-hero" : "store-shell"}>
       <div className="sf-announce">
         <div className="sf-wrap">
           <span>{settings.announcement}</span>
@@ -446,7 +460,7 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
             <Icon name="menu" size={19} />
           </button>
           <button className="sf-logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <img className="sf-logo-mark" src="/favicon.png" alt="" width={42} height={42} />
+            <img className="sf-logo-mark" src="/favicon/web-app-manifest-192x192.png" alt="" width={54} height={54} />
             <span className="sf-logo-text">{settings.store_name}<small>THE EVERYDAY EDIT</small></span>
           </button>
           <nav className="sf-nav">
@@ -483,7 +497,7 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
         <section className="sf-hero">
           <div className="sf-wrap sf-hero-grid">
             <div className="sf-hero-copy">
-              <p className="sf-eyebrow">THE BAG STYLE COLLECTION</p>
+              <p className="sf-eyebrow">THE BAG BARI COLLECTION</p>
               <h1>{settings.hero_title}</h1>
               <p className="sf-hero-sub">{settings.hero_subtitle}</p>
               <div className="sf-hero-actions">
@@ -501,7 +515,7 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
               </ul>
             </div>
             <div className="sf-hero-media">
-              <ProductImage src={heroImage} alt={featured?.name || "Bag Style handbag"} fetchPriority="high" sizes="(max-width: 900px) 100vw, 46vw" />
+              <ProductImage src={heroImage} alt={featured?.name || "Bag Bari handbag"} fetchPriority="high" sizes="(max-width: 900px) 100vw, 46vw" />
               <span className="sf-hero-stat">{products.length || 0}+ styles in stock</span>
               {featured ? (
                 <button className="sf-hero-badge" onClick={() => openProduct(featured)}>
@@ -620,11 +634,11 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
             <div className="sf-story-copy">
               <p className="sf-eyebrow">THE WAY WE SEE IT</p>
               <h2>Good style should<br /><em>feel like you.</em></h2>
-              <p>We believe the right bag is more than something you carry. It is part of the little rituals, big plans and everyday stories that make a day yours. That is the feeling behind Bag Style.</p>
+              <p>We believe the right bag is more than something you carry. It is part of the little rituals, big plans and everyday stories that make a day yours. That is the feeling behind Bag Bari.</p>
               <button className="sf-link" onClick={() => goToCollection()}>Find a little something <Icon name="arrow" size={15} /></button>
             </div>
             <div className="sf-story-media">
-              <ProductImage src={products[1]?.images?.[0] || heroImage} alt="A Bag Style piece ready for the day" loading="lazy" sizes="(max-width: 900px) 100vw, 44vw" />
+              <ProductImage src={products[1]?.images?.[0] || heroImage} alt="A Bag Bari piece ready for the day" loading="lazy" sizes="(max-width: 900px) 100vw, 44vw" />
             </div>
           </div>
         </section>
@@ -657,7 +671,7 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
           <div className="sf-footer-grid">
             <div>
               <div className="sf-footer-brand">
-                <img className="sf-logo-mark" src="/favicon.png" alt="" width={42} height={42} />
+                <img className="sf-logo-mark" src="/favicon/favicon-96x96.png" alt="" width={54} height={54} />
                 <div><strong>{settings.store_name}</strong><small>THE EVERYDAY EDIT</small></div>
               </div>
               <p>Carry a little more of what makes you, you.</p>
@@ -671,7 +685,7 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
             <div className="sf-footer-col">
               <strong>Contact</strong>
               {whatsappConfigured ? <a data-wa="footer" href={supportWhatsApp()} target="_blank" rel="noreferrer">WhatsApp {settings.whatsapp_number}</a> : null}
-              <span style={{ color: "#b7bdac", fontSize: 13 }}>Cash on delivery</span>
+              <span style={{ color: "#b0a48c", fontSize: 13 }}>Cash on delivery</span>
               <button onClick={() => navigate("/admin")}>Store admin</button>
             </div>
           </div>
@@ -684,22 +698,24 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
 
       {notice ? <div className="sf-toast"><Icon name="check" size={17} />{notice}</div> : null}
 
-      <div className="sf-sticky">
-        <span className="sf-sticky-total">
-          <strong>{money(cartCount ? total : 0)}</strong>
-          <small>{cartCount ? cartCount + (cartCount === 1 ? " item in bag" : " items in bag") : "No items yet"}</small>
-        </span>
-        <button className="sf-btn sf-btn-ghost" onClick={() => setCartOpen(true)}>View bag</button>
-        <a
-          className="sf-btn sf-btn-wa"
-          data-wa="sticky_bar"
-          href={cart.length ? cartWhatsApp() : (featured ? productWhatsApp(featured) : undefined)}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Icon name="whatsapp" size={17} /> WhatsApp
-        </a>
-      </div>
+      {showStickyBar ? (
+        <div className="sf-sticky">
+          <span className="sf-sticky-total">
+            <strong>{money(cartCount ? total : 0)}</strong>
+            <small>{cartCount ? cartCount + (cartCount === 1 ? " item in bag" : " items in bag") : "No items yet"}</small>
+          </span>
+          <button className="sf-btn sf-btn-ghost" onClick={() => setCartOpen(true)}>View bag</button>
+          <a
+            className="sf-btn sf-btn-wa"
+            data-wa="sticky_bar"
+            href={cart.length ? cartWhatsApp() : (featured ? productWhatsApp(featured) : undefined)}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Icon name="whatsapp" size={17} /> WhatsApp
+          </a>
+        </div>
+      ) : null}
 
       {cartOpen ? (
         <div className="sf-overlay" onMouseDown={(event) => { if (event.target === event.currentTarget) setCartOpen(false); }}>
@@ -786,7 +802,7 @@ export default function Storefront({ navigate, initialSlug, initialCategorySlug 
             </div>
             <div className="sf-product-body">
               <div className="sf-product-scroll">
-                <p className="sf-eyebrow">{selected.category?.name || "BAG STYLE"}</p>
+                <p className="sf-eyebrow">{selected.category?.name || "BAG BARI"}</p>
                 <h2>{selected.name}</h2>
                 <div className="sf-product-prices">
                   <strong>{money(selected.price)}</strong>

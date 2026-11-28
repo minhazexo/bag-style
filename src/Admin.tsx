@@ -394,7 +394,7 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
   };
 
   if (!supabase) {
-    return <div className="admin-gate"><div className="admin-gate-card"><span className="admin-gate-mark">b.</span><p className="eyebrow">BAG STYLE · ADMIN</p><h1>Connect your store.</h1><p>Add your Supabase Project URL and publishable key to the Vercel environment or local .env.local file. Then run the setup SQL and reload this page.</p><button className="button button-dark" onClick={() => navigate("/")}>Back to storefront <AdminIcon name="arrow" /></button></div></div>;
+    return <div className="admin-gate"><div className="admin-gate-card"><span className="admin-gate-mark">b.</span><p className="eyebrow">BAG BARI · ADMIN</p><h1>Connect your store.</h1><p>Add your Supabase Project URL and publishable key to the Vercel environment or local .env.local file. Then run the setup SQL and reload this page.</p><button className="button button-dark" onClick={() => navigate("/")}>Back to storefront <AdminIcon name="arrow" /></button></div></div>;
   }
 
   if (!authReady) return <div className="admin-loading">Preparing your admin space…</div>;
@@ -402,8 +402,8 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
   if (!session) {
     return (
       <div className="admin-login-shell">
-        <div className="admin-login-aside"><button className="admin-login-logo" onClick={() => navigate("/")}>b.<span>BAG STYLE</span></button><div><p className="eyebrow">BEHIND THE EVERYDAY</p><h1>A little space<br />to run your store.</h1><p>Manage the collection, keep an eye on orders and make the store feel like yours.</p></div><span className="login-aside-foot">BAG STYLE · STORE MANAGEMENT</span></div>
-        <div className="admin-login-main"><button className="back-store-link" onClick={() => navigate("/")}>← Back to storefront</button><form className="admin-login-form" onSubmit={signIn}><p className="eyebrow">WELCOME BACK</p><h2>Admin sign in</h2><p className="login-intro">Use your authorised Bag Style account to continue.</p><label>Email address<input type="email" autoComplete="username" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" /></label><label>Password<input type="password" autoComplete="current-password" required value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Your password" /></label>{authError ? <AdminNotice error>{authError}</AdminNotice> : null}<button className="button button-dark button-full" disabled={saving}>{saving ? "Signing in…" : "Sign in securely"} <AdminIcon name="arrow" /></button><small>Access is limited to accounts listed in the store's admin allow-list.</small></form></div>
+        <div className="admin-login-aside"><button className="admin-login-logo" onClick={() => navigate("/")}>b.<span>BAG BARI</span></button><div><p className="eyebrow">BEHIND THE EVERYDAY</p><h1>A little space<br />to run your store.</h1><p>Manage the collection, keep an eye on orders and make the store feel like yours.</p></div><span className="login-aside-foot">BAG BARI · STORE MANAGEMENT</span></div>
+        <div className="admin-login-main"><button className="back-store-link" onClick={() => navigate("/")}>← Back to storefront</button><form className="admin-login-form" onSubmit={signIn}><p className="eyebrow">WELCOME BACK</p><h2>Admin sign in</h2><p className="login-intro">Use your authorised Bag Bari account to continue.</p><label>Email address<input type="email" autoComplete="username" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" /></label><label>Password<input type="password" autoComplete="current-password" required value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Your password" /></label>{authError ? <AdminNotice error>{authError}</AdminNotice> : null}<button className="button button-dark button-full" disabled={saving}>{saving ? "Signing in…" : "Sign in securely"} <AdminIcon name="arrow" /></button><small>Access is limited to accounts listed in the store's admin allow-list.</small></form></div>
       </div>
     );
   }
@@ -415,7 +415,7 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
   return (
     <div className="admin-shell">
       <aside className="admin-sidebar">
-        <button className="admin-brand" onClick={() => navigate("/")}>b.<span><strong>BAG STYLE</strong><small>STORE ADMIN</small></span></button>
+        <button className="admin-brand" onClick={() => navigate("/")}>b.<span><strong>BAG BARI</strong><small>STORE ADMIN</small></span></button>
         <div className="sidebar-label">WORKSPACE</div>
         <nav className="admin-nav">
           {([
@@ -431,14 +431,14 @@ export default function Admin({ navigate }: { navigate: (path: string) => void }
       </aside>
 
       <main className="admin-main">
-        <header className="admin-topbar"><div><p className="eyebrow">BAG STYLE / MANAGEMENT</p><h1>{pageTitle}</h1></div><div className="admin-top-actions"><span className="admin-live-dot">Store connected</span><button className="button button-outline button-small" onClick={() => navigate("/")}>View storefront <AdminIcon name="arrow" /></button></div></header>
+        <header className="admin-topbar"><div><p className="eyebrow">BAG BARI / MANAGEMENT</p><h1>{pageTitle}</h1></div><div className="admin-top-actions"><span className="admin-live-dot">Store connected</span><button className="button button-outline button-small" onClick={() => navigate("/")}>View storefront <AdminIcon name="arrow" /></button></div></header>
         <div className="admin-content">
           {error ? <AdminNotice error>{error}</AdminNotice> : null}
           {notice ? <AdminNotice>{notice}</AdminNotice> : null}
 
           {tab === "overview" ? (
             <section className="admin-overview">
-              <div className="admin-welcome-panel"><div><p className="eyebrow">YOUR STORE, AT A GLANCE</p><h2>Good to see you.</h2><p>Here is what is happening with Bag Style today.</p></div><span className="welcome-symbol">✳</span></div>
+              <div className="admin-welcome-panel"><div><p className="eyebrow">YOUR STORE, AT A GLANCE</p><h2>Good to see you.</h2><p>Here is what is happening with Bag Bari today.</p></div><span className="welcome-symbol">✳</span></div>
               <div className="stats-grid">
                 <div className="stat-card"><span>PRODUCTS</span><strong>{products.length}</strong><small>In your catalogue</small><i><AdminIcon name="box" /></i></div>
                 <div className="stat-card"><span>ORDERS</span><strong>{orders.length}</strong><small>Latest 100 orders</small><i><AdminIcon name="orders" /></i></div>

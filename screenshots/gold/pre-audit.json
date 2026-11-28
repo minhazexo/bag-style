@@ -1,0 +1,515 @@
+[
+  {
+    "route": "home",
+    "width": "1440",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "home",
+    "width": "768",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "home",
+    "width": "375",
+    "overflow": 0,
+    "wide": [],
+    "small": [
+      "button[Travel Bag] 74x20",
+      "button[Tiny Purse] 75x20",
+      "button[School Bag] 77x20",
+      "button[Student Bag] 85x20",
+      "button[Ladiesh Bag] 85x20",
+      "button[Ladies Bag] 75x20",
+      "button[Men’s Backpack] 112x20",
+      "button[Mens Backpack] 109x20",
+      "button[Party purse] 81x20",
+      "button[Printed Purse] 97x20",
+      "button[Purse] 40x20",
+      "button[Little Purse Bag] 110x20"
+    ],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=15px",
+      ".sf-trust-item small 4.01:1 size=11.5px",
+      ".sf-announce 17.54:1 size=11px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "category",
+    "width": "1440",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 9.77:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "category",
+    "width": "768",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 9.77:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "category",
+    "width": "375",
+    "overflow": 0,
+    "wide": [],
+    "small": [
+      "button[School Bag] 77x20",
+      "button[Student Bag] 85x20",
+      "button[Printed School Bag] 133x20",
+      "button[Girl School Bag] 108x20",
+      "button[BackPack] 67x20",
+      "button[All bags] 47x29",
+      "button[School Bag] 66x29",
+      "button[Ladies Bag] 65x29",
+      "a[Our story] 57x29",
+      "a[WhatsApp 01777190780] 145x29",
+      "button[Store admin] 73x29"
+    ],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=15px",
+      ".sf-trust-item small 4.01:1 size=11.5px",
+      ".sf-announce 17.54:1 size=11px",
+      ".sf-chip 9.77:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "product",
+    "width": "1440",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "product",
+    "width": "768",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "product",
+    "width": "375",
+    "overflow": 0,
+    "wide": [],
+    "small": [
+      "button[Travel Bag] 74x20",
+      "button[Tiny Purse] 75x20",
+      "button[School Bag] 77x20",
+      "button[Student Bag] 85x20",
+      "button[Ladiesh Bag] 85x20",
+      "button[Ladies Bag] 75x20",
+      "button[Men’s Backpack] 112x20",
+      "button[Mens Backpack] 109x20",
+      "button[Party purse] 81x20",
+      "button[Printed Purse] 97x20",
+      "button[Purse] 40x20",
+      "button[Little Purse Bag] 110x20"
+    ],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=15px",
+      ".sf-trust-item small 4.01:1 size=11.5px",
+      ".sf-announce 17.54:1 size=11px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "admin",
+    "width": "1440",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [],
+    "olive": []
+  },
+  {
+    "route": "admin",
+    "width": "768",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [],
+    "olive": []
+  },
+  {
+    "route": "admin",
+    "width": "375",
+    "overflow": 0,
+    "wide": [],
+    "small": [
+      "button[← Back to storefront] 99x14"
+    ],
+    "colors": [],
+    "olive": []
+  },
+  {
+    "route": "cart",
+    "width": "1440",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "checkout",
+    "width": "1440",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "cart",
+    "width": "768",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "checkout",
+    "width": "768",
+    "overflow": 0,
+    "wide": [],
+    "small": [],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=16px",
+      ".sf-trust-item small 4.01:1 size=12px",
+      ".sf-announce 17.54:1 size=12px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "cart",
+    "width": "375",
+    "overflow": 0,
+    "wide": [],
+    "small": [
+      "button[Travel Bag] 74x20",
+      "button[School Bag] 77x20",
+      "button[Student Bag] 85x20",
+      "button[Tiny Purse] 75x20",
+      "button[Ladiesh Bag] 85x20",
+      "button[Ladies Bag] 75x20",
+      "button[Men’s Backpack] 112x20",
+      "button[Mens Backpack] 109x20",
+      "button[Party purse] 81x20",
+      "button[Printed Purse] 97x20",
+      "button[Purse] 40x20",
+      "button[Little Purse Bag] 110x20"
+    ],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=15px",
+      ".sf-trust-item small 4.01:1 size=11.5px",
+      ".sf-announce 17.54:1 size=11px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  },
+  {
+    "route": "checkout",
+    "width": "375",
+    "overflow": 0,
+    "wide": [],
+    "small": [
+      "button[Travel Bag] 74x20",
+      "button[School Bag] 77x20",
+      "button[Student Bag] 85x20",
+      "button[Tiny Purse] 75x20",
+      "button[Ladiesh Bag] 85x20",
+      "button[Ladies Bag] 75x20",
+      "button[Men’s Backpack] 112x20",
+      "button[Mens Backpack] 109x20",
+      "button[Party purse] 81x20",
+      "button[Printed Purse] 97x20",
+      "button[Purse] 40x20",
+      "button[Little Purse Bag] 110x20"
+    ],
+    "colors": [
+      ".sf-eyebrow 3.96:1 size=11px",
+      ".sf-section-sub 3.88:1 size=14px",
+      ".sf-card-cat 4.01:1 size=11px",
+      ".sf-footer p 2.58:1 size=13px",
+      ".sf-nav button 9.45:1 size=13px",
+      ".sf-hero-sub 9.45:1 size=15px",
+      ".sf-trust-item small 4.01:1 size=11.5px",
+      ".sf-announce 17.54:1 size=11px",
+      ".sf-chip 16.53:1 size=13px",
+      ".sf-stock 5.02:1 size=12px"
+    ],
+    "olive": [
+      "color=rgb(15, 122, 74) on a.sf-icon-btn",
+      "backgroundColor=rgb(234, 250, 240) on a.sf-icon-btn",
+      "borderTopColor=rgb(205, 234, 216) on a.sf-icon-btn",
+      "color=rgb(15, 122, 74) on svg.[object",
+      "borderTopColor=rgb(15, 122, 74) on svg.[object",
+      "color=rgb(15, 122, 74) on path.[object",
+      "borderTopColor=rgb(15, 122, 74) on path.[object"
+    ]
+  }
+]

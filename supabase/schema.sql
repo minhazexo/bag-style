@@ -1,4 +1,4 @@
--- BAG STYLE - Supabase schema
+-- BAG BARI - Supabase schema
 -- Run this script in Supabase SQL Editor. All exposed tables have explicit
 -- Data API grants and RLS policies.
 
@@ -336,7 +336,7 @@ on storage.objects for delete to authenticated
 using (bucket_id = 'product-images' and public.is_admin());
 
 insert into public.store_settings (key, value) values
-  ('store_name', '"BAG STYLE"'::jsonb),
+  ('store_name', '"BAG BARI"'::jsonb),
   ('announcement', '"A little something special for the way you move."'::jsonb),
   ('hero_title', '"Carry your story."'::jsonb),
   ('hero_subtitle', '"Considered shapes, everyday ease, and the details that make a bag yours."'::jsonb),

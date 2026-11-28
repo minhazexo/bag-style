@@ -1,0 +1,12 @@
+$ tsc --noEmit && vite build && bun scripts/prerender-products.mjs
+[36mvite v8.3.8 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 68 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.72 kB │ gzip:   0.61 kB
+dist/assets/index-Ejl_H1X2.css   54.95 kB │ gzip:  10.84 kB
+dist/assets/index-DXIl_Upl.js   510.43 kB │ gzip: 143.25 kB
+
+[32m✓ built in 507ms[39m
+[seo] Wrote 77 product pages to dist/p/, 8 category pages to dist/c/ and dist/sitemap.xml with 86 URLs.
